@@ -1,58 +1,157 @@
-
 body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  background-color: #f8f8f8;
-}
-
-.menu {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 20px; 
-  width: 80%;
-  max-width: 800px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.menu-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  transition: transform 0.2s;
-}
-
-.menu-item:hover {
-  transform: scale(1.05); 
-}
-
-.menu-item img {
-  width: 100px;
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.menu-item h4 {
-  font-size: 1.1em;
-  margin: 5px 0;
-  color: #333;
-}
-
-.menu-item p {
-  font-size: 1em;
-  color: #666;
-}
-
-
+    margin: 0;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .solar-system {
+    position: relative;
+    width: 600px;
+    height: 600px;
+  }
+  
+  .sun {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 50px yellow;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .orbit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin infinite linear;
+  }
+  
+  .orbit .planet {
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Gezegen Özellikleri */
+  .mercury {
+    width: 6px;
+    height: 6px;
+    background: gray;
+  }
+  
+  .venus {
+    width: 12px;
+    height: 12px;
+    background: yellow;
+  }
+  
+  .earth {
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(to bottom, blue, green);
+  }
+  
+  .mars {
+    width: 10px;
+    height: 10px;
+    background: red;
+  }
+  
+  .jupiter {
+    width: 28px;
+    height: 28px;
+    background: brown;
+  }
+  
+  .saturn {
+    width: 24px;
+    height: 24px;
+    background: lightyellow;
+    box-shadow: 0 0 0 6px rgba(255, 255, 153, 0.5);
+  }
+  
+  .uranus {
+    width: 16px;
+    height: 16px;
+    background: lightblue;
+  }
+  
+  .neptune {
+    width: 16px;
+    height: 16px;
+    background: darkblue;
+  }
+  
+  /* Yörünge Boyutları ve Dönüş Süreleri */
+  .mercury-orbit {
+    width: 140px;
+    height: 140px;
+    animation-duration: 5s;
+  }
+  
+  .venus-orbit {
+    width: 200px;
+    height: 200px;
+    animation-duration: 8s;
+  }
+  
+  .earth-orbit {
+    width: 260px;
+    height: 260px;
+    animation-duration: 10s;
+  }
+  
+  .mars-orbit {
+    width: 320px;
+    height: 320px;
+    animation-duration: 12s;
+  }
+  
+  .jupiter-orbit {
+    width: 400px;
+    height: 400px;
+    animation-duration: 15s;
+  }
+  
+  .saturn-orbit {
+    width: 480px;
+    height: 480px;
+    animation-duration: 18s;
+  }
+  
+  .uranus-orbit {
+    width: 540px;
+    height: 540px;
+    animation-duration: 20s;
+  }
+  
+  .neptune-orbit {
+    width: 600px;
+    height: 600px;
+    animation-duration: 22s;
+  }
+  
+  /* Animasyon */
+  @keyframes spin {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
   
