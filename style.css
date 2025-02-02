@@ -46,7 +46,7 @@ body {
     transform: translateX(-50%);
   }
   
-  /* Gezegen Özellikleri */
+
   .mercury {
     width: 6px;
     height: 6px;
@@ -96,7 +96,7 @@ body {
     background: darkblue;
   }
   
-  /* Yörünge Boyutları ve Dönüş Süreleri */
+
   .mercury-orbit {
     width: 140px;
     height: 140px;
@@ -145,7 +145,7 @@ body {
     animation-duration: 22s;
   }
   
-  /* Animasyon */
+
   @keyframes spin {
     from {
       transform: translate(-50%, -50%) rotate(0deg);
