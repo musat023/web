@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ukázka filtrování dat</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <h1>Ukázka filtrování dat</h1>
+
+  <nav class="nav-menu">
+    <a href="#table-section">Tabulka</a>
+    <a href="#form-section">Formulář</a>
+  </nav>
+
+  <section id="table-section" class="section">
+    <h2>Seznam měst</h2>
+    <table id="city-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>
+            Město <br />
+            <input type="text" id="city-filter" placeholder="Filtruj města..." />
+          </th>
+          <th>Počet obyvatel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Praha</td><td>1300000</td></tr>
+        <tr><td>2</td><td>Brno</td><td>380000</td></tr>
+        <tr><td>3</td><td>Ostrava</td><td>290000</td></tr>
+        <tr><td>4</td><td>Plzeň</td><td>175000</td></tr>
+        <tr><td>5</td><td>Liberec</td><td>105000</td></tr>
+        <tr><td>6</td><td>Olomouc</td><td>100000</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="form-section" class="section">
+    <h2>Výběr města</h2>
+    <form id="city-form">
+      <label for="first-name">Jméno:</label>
+      <input type="text" id="first-name" placeholder="Zadejte jméno" required />
+
+      <label for="last-name">Příjmení:</label>
+      <input type="text" id="last-name" placeholder="Zadejte příjmení" required />
+
+      <label for="select-filter">Filtr měst:</label>
+      <input type="text" id="select-filter" placeholder="Filtruj ve výběru..." />
+
+      <label for="city-select">Město:</label>
+      <select id="city-select">
+        <option>Praha</option>
+        <option>Brno</option>
+        <option>Ostrava</option>
+        <option>Plzeň</option>
+        <option>Liberec</option>
+        <option>Olomouc</option>
+      </select>
+
+      <button type="submit">Odeslat</button>
+    </form>
+
+    <div id="form-result"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
